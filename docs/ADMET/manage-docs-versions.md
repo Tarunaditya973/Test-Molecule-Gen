@@ -2,54 +2,15 @@
 sidebar_position: 1
 ---
 
-# Manage Docs Versions
+# Introduction
 
-Docusaurus can manage multiple versions of your docs.
+**ADMET** is a highly accurate tool for the prediction of ADMET properties of small molecules.
 
-## Create a docs version
+![ADMET](../ADMET/img/ADMET.png)
 
-Release a version 1.0 of your project:
 
-```bash
-npm run docusaurus docs:version 1.0
-```
+### Description
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
 
-Your docs now have 2 versions:
+The ADME and Tox app harnesses the power of Graph Neural Networks (GNNs) to predict the Absorption, Distribution, Metabolism, Excretion, and Toxicity (ADMET) properties of molecules. It uses the state-of-the-art GNN architectures, with over 200 computationally derived molecular features as inputs to the network that provides unparalleled accuracy.
 
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
-
-## Add a Version Dropdown
-
-To navigate seamlessly across versions, add a version dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'docsVersionDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The docs version dropdown appears in your navbar:
-
-![Docs Version Dropdown](./img/docsVersionDropdown.png)
-
-## Update an existing version
-
-It is possible to edit versioned docs in their respective folder:
-
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
