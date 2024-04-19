@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Intoduction
+# Introduction
 
 - Genie-DiffMol is a target-aware diffusion-based de novo ligand generation module.
 - Genie-DiffMol generates novel ligands that are optimally suited to bind to specified binding sites within a given protein.
