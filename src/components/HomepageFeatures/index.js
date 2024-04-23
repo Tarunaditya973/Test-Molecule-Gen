@@ -6,52 +6,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Link } from "react-router-dom";
 
-const FeatureList = [
-  {
-    title: "Genie",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    description: (
-      <>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s
-      </>
-    ),
-  },
-  {
-    title: "ADMET",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when a
-      </>
-    ),
-  },
-  {
-    title: "Screenie",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an u
-      </>
-    ),
-  },
-  {
-    title: "Screenie",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an
-      </>
-    ),
-  },
-];
+
 
 function Feature({ Svg, title, description }) {
   return (
@@ -70,11 +25,9 @@ function Feature({ Svg, title, description }) {
 export default function HomepageFeatures() {
   return (
     <Box
-    
       sx={{
-        p: 10,
-        m: 10,
-        
+        p: { xs: 2, md: 5 }, // Adjust padding based on screen size
+        m: { xs: 2, md: 5 }, // Adjust margin based on screen size
       }}
     >
       <Typography variant="h3" fontWeight={900}>
@@ -82,30 +35,25 @@ export default function HomepageFeatures() {
       </Typography>
       <Box
         sx={{
-          pl: 5,
+          pl: 2, // Adjust left padding for smaller screens
           pt: 2,
         }}
       >
         <ul>
           <li>
             <Link to="/docs/category/genie">GENIE</Link>
-           
-               
-                <ul>
-                  <li>
-                    <Link to="/docs/Genie/Introduction">Introduction</Link>
-                  </li>
-                  <li>
-                    <Link to="/docs/Genie/Usage">Usage</Link>
-                  </li>
-                  <li>
-                    <Link to="/docs/Genie/Outputs">Outputs</Link>
-                  </li>
-                </ul>
+            <ul>
+              <li>
+                <Link to="/docs/Genie/Introduction">Introduction</Link>
               </li>
-              
-           
-
+              <li>
+                <Link to="/docs/Genie/Usage">Usage</Link>
+              </li>
+              <li>
+                <Link to="/docs/Genie/Outputs">Outputs</Link>
+              </li>
+            </ul>
+          </li>
           <li>
             <Link to="/docs/category/admet">ADMET</Link>
             <ul>
@@ -120,10 +68,9 @@ export default function HomepageFeatures() {
               </li>
             </ul>
           </li>
-      
-          
         </ul>
       </Box>
     </Box>
   );
 }
+
