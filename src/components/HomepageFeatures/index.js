@@ -1,32 +1,61 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+import { Box, Typography } from "@mui/material";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import { Link } from "react-router-dom";
 
 const FeatureList = [
   {
-    title: 'Genie-Diffmol',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Genie",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-       DiffMol is a target-aware diffusion-based de novo ligand generation module that generates small molecules that are best suited to bind to specific binding sites in a particular protein. It is based on TargeDiff[1], and leverages SE(3)-equivariant networks for generating molecules with realistic structures and improved binding affinities.
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s
       </>
     ),
   },
   {
-    title: 'ADMET',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "ADMET",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-       The ADME and Tox app harnesses the power of Graph Neural Networks (GNNs) to predict the Absorption, Distribution, Metabolism, Excretion, and Toxicity (ADMET) properties of molecules. It uses the state-of-the-art GNN architectures, with over 200 computationally derived molecular features as inputs to the network that provides unparalleled accuracy.
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when a
       </>
     ),
   },
-  
+  {
+    title: "Screenie",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    description: (
+      <>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an u
+      </>
+    ),
+  },
+  {
+    title: "Screenie",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    description: (
+      <>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an
+      </>
+    ),
+  },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -40,14 +69,67 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <Box
+    
+      sx={{
+        p: 10,
+        m: 10,
+        
+      }}
+    >
+      <Typography variant="h3" fontWeight={900}>
+        Table of Contents
+      </Typography>
+      <Box
+        sx={{
+          pl: 5,
+          pt: 2,
+        }}
+      >
+        <ul>
+          <li>
+            <Link to="/docs/category/genie">GENIE</Link>
+            <ul>
+              <li>
+                Genie-Diffmol
+                <ul>
+                  <li>
+                    <Link to="/docs/Genie/Introduction">Introduction</Link>
+                  </li>
+                  <li>
+                    <Link to="/docs/Genie/Usage">Usage</Link>
+                  </li>
+                  <li>
+                    <Link to="/docs/Genie/Outputs">Outputs</Link>
+                  </li>
+                </ul>
+              </li>
+              <li>Genie-Tagmol</li>
+            </ul>
+          </li>
+
+          <li>
+            <Link to="/docs/category/admet">ADMET</Link>
+            <ul>
+              <li>
+                <Link to="/docs/ADMET/manage-docs-versions">Introduction</Link>
+              </li>
+              <li>
+                <Link to="/docs/ADMET/Inputs">User Inputs</Link>
+              </li>
+              <li>
+                <Link to="/docs/ADMET/job_submission">Job Submission</Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link to="/">SCREENIE</Link>
+          </li>
+          <li>
+            <Link></Link>
+          </li>
+        </ul>
+      </Box>
+    </Box>
   );
 }
