@@ -89,9 +89,8 @@ export default function HomepageFeatures() {
         <ul>
           <li>
             <Link to="/docs/category/genie">GENIE</Link>
-            <ul>
-              <li>
-                Genie-Diffmol
+           
+               
                 <ul>
                   <li>
                     <Link to="/docs/Genie/Introduction">Introduction</Link>
@@ -104,9 +103,8 @@ export default function HomepageFeatures() {
                   </li>
                 </ul>
               </li>
-              <li>Genie-Tagmol</li>
-            </ul>
-          </li>
+              
+           
 
           <li>
             <Link to="/docs/category/admet">ADMET</Link>
@@ -122,12 +120,8 @@ export default function HomepageFeatures() {
               </li>
             </ul>
           </li>
-          <li>
-            <Link to="/">SCREENIE</Link>
-          </li>
-          <li>
-            <Link></Link>
-          </li>
+      
+          
         </ul>
       </Box>
     </Box>
